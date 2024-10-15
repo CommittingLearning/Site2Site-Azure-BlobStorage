@@ -44,12 +44,6 @@ variable "account_replication_type" {
     default     = "LRS" #Locally-redundant storage
 }
 
-variable "allowed_ip" {
-    description = "The public IP address allowed to access the blob storage"
-    type        = string
-    default     = "98.247.36.44"
-}
-
 variable "container_name" {
     description = "Name of the blob container"
     type        = string
