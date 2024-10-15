@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "rg" {
-    name = var.rg_name
+    name = "${var.rg_name}_${var.environment}"
     location = var.location
 }
 
 resource "azurerm_storage_account" "storage_account" {
-    name = var.storage_account_name
+    name = "${var.storage_account_name}_${var.environment}"
     resource_group_name = azurerm_resource_group.rg.name
     location = azurerm_resource_group.rg.location
     account_tier = var.account_tier
