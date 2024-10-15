@@ -29,7 +29,7 @@ resource "azurerm_storage_container" "terraform_state_container" {
 }
 
 # Define the Storage Management Policy (Lifecycle Policy)
-resource "azure_storage_management_policy" "Lifecycle_policy" {
+resource "azurerm_storage_management_policy" "Lifecycle_policy" {
     storage_account_id = azurerm_storage_account.storage_account.id
 
     rule {
@@ -41,8 +41,8 @@ resource "azure_storage_management_policy" "Lifecycle_policy" {
         }
 
         actions {
-            delete {
-                days_after_modification_greater_than = 1 #Delete blobs after 1 day
+            snapshot {
+                delete_after_days_since_creation_greater_than = 1 #Delete blobs after 1 day
             }
         }
     }
