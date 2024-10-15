@@ -31,7 +31,7 @@ variable "environment" {
 variable "storage_account_name" {
     description = "Name of the Storage account being created"
     type        = string
-    default     = "TSBlobStore101" # Must be globally unique
+    default     = "tsblobstore101" # Must be globally unique
 }
 
 variable "account_tier" {
