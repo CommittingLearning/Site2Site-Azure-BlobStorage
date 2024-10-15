@@ -9,6 +9,7 @@ resource "azurerm_storage_account" "storage_account" {
     location = azurerm_resource_group.rg.location
     account_tier = var.account_tier
     account_replication_type = var.account_replication_type
+    min_tls_version = var.tls_version
 
     tags = {
         environment = var.environment

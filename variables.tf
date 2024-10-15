@@ -61,3 +61,9 @@ variable "access_type" {
     type        = string
     default     = "private"
 }
+
+variable "tls_version" {
+    description = "The minimum supported TLS version for the storage account"
+    type        = string
+    default     = "TLS1_2"
+}
