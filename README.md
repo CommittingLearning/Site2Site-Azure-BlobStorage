@@ -70,9 +70,9 @@ The Terraform configuration deploys the following resources:
 The `variables.tf` file defines the inputs for the Terraform configuration:
 
 - **Azure Credentials:**
-  - `azure_subscription_id` (type: `string`)
-  - `azure_client_id` (type: `string`)
-  - `azure_tenant_id` (type: `string`)
+  - `azure_subscription_id` (type: `string`, provided via secrets)
+  - `azure_client_id` (type: `string`, provided via secrets)
+  - `azure_tenant_id` (type: `string`, provided via secrets)
 
 - **Resource Group:**
   - `rg_name` (default: `"Site2Site_rg"`)
