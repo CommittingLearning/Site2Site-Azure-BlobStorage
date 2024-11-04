@@ -1,8 +1,10 @@
+# Create a Resource Group
 resource "azurerm_resource_group" "rg" {
     name = "${var.rg_name}_${var.environment}"
     location = var.location
 }
 
+# Create a Storage Account for the Container
 resource "azurerm_storage_account" "storage_account" {
     name = "${var.storage_account_name}${var.environment}"
     resource_group_name = azurerm_resource_group.rg.name
